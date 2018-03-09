@@ -28,3 +28,4 @@ fibs.forEach(n => {
 console.log(current);
 console.log(fibs.length);
 console.log(sum);
+//4613732
