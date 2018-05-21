@@ -8,8 +8,8 @@ import math
 def isPrime(n):
   if n==1:
     return False
-  rn = math.sqrt(n)
-  for x in xrange(2, n):
+  rn = int(math.ceil(math.sqrt(n)))
+  for x in xrange(2, rn):
     if n%x == 0:
       return False
   return True
