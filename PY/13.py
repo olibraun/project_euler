@@ -3,7 +3,7 @@
 #Work out the first ten digits of the sum of the following one-hundred 50-digit numbers.
 #numbers.txt
 
-filename = '/home/oli/repositories/project_euler/13_PY/numbers.txt'
+filename = '/home/oli/repositories/project_euler/PY/p013_numbers.txt'
 
 # with open() as f:
 #   lines = f.readlines()

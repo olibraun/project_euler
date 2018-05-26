@@ -7,7 +7,7 @@
 #So, COLIN would obtain a score of 938 * 53 = 49714.
 #What is the total of all the name scores in the file?
 
-filename = '/home/oli/repositories/project_euler/PY/22_PY/p022_names.txt'
+filename = '/home/oli/repositories/project_euler/PY/p022_names.txt'
 
 raw = [x for x in open(filename)]
 st = raw[0]
