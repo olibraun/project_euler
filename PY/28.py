@@ -9,3 +9,16 @@
 #It can be verified that the sum of the numbers on the diagonals is 101.
 #What is the sum of the numbers on the diagonals in a 1001 by 1001 spiral formed in the same way?
 
+grid_size = 1001
+
+number = 1
+length = 2
+diagonals = [1]
+
+while number < grid_size**2:
+  for i in range(0, 4):
+    number += length
+    diagonals.append(number)
+  length += 2
+
+print sum(diagonals)
