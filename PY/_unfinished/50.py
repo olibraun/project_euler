@@ -23,20 +23,30 @@ def isPrime(n):
       return False
   return True
 
-limit = 100
+limit = 1000000
 primes = [x for x in xrange(1, limit) if isPrime(x)]
 
+print 'List of primes generated, beginning the search.'
+
 longest_sequence = []
+for i in xrange(0, len(primes) - 1):
+  value = 0
+  j = i
+  sequence = []
+  while value < limit:
+    p = primes[j]
+    value += p
+    if value < limit:
+      sequence.append(p)
+      if isPrime(value) and len(sequence) > len(longest_sequence):
+        longest_sequence = list(sequence)
+    if j + 1 < len(primes):
+      j += 1
+  if i % 20000 == 0 and i != 0:
+    print 'First ' + str(i) + ' primes checked.'
 
-for i in xrange(0, len(primes)):
-  current_sequence = []
-  current_sequence.append(primes[i])
-  n = i+1
-  while isPrime(sum(current_sequence)) and n < len(primes):
-    current_sequence.append(primes[n])
-    n += 1
-  if len(current_sequence) > len(longest_sequence):
-    longest_sequence = current_sequence
+message = 'The result is ' + str(sum(longest_sequence)) 
+message += ', which is the sum of ' + str(len(longest_sequence))
+message += ' consecutive primes starting with ' + str(min(longest_sequence)) + '.'
 
-print longest_sequence
-print sum(longest_sequence)
+print message
