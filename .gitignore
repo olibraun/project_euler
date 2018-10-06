@@ -1,2 +1,3 @@
 *.exe
 settings.json
+PY/__pycache__/*
