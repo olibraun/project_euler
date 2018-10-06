@@ -18,10 +18,5 @@ def p(n, m):
 def f(n):
   return p(n, n-1)
 
-# Fill dictionary with potentially useful stuff
-for i in range(1, 35):
-  for j in range(1, i):
-    p(i, j)
-
 res = f(100)
 print('There are %d partitions of the requested kind for the number 100.' % res)
