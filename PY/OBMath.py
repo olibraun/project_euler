@@ -1,5 +1,6 @@
 class Partitions:
   mydict = {}
+  mydict2 = {}
 
   @staticmethod
   def p(n, m):
@@ -15,3 +16,31 @@ class Partitions:
     if (n-m, m) not in Partitions.mydict:
       Partitions.mydict[(n-m, m)] = Partitions.p(n-m, m)
     return Partitions.mydict[(n, m-1)] + Partitions.mydict[(n-m, m)]
+
+  @staticmethod
+  def generalized_pentagonal(k):
+    return int(k * (3*k - 1) / 2)
+
+  @staticmethod
+  def fast_p(n):
+    if n < 0:
+      return 0
+    if n == 0 or n == 1:
+      return 1
+    res = 0
+    k = 1
+    gk = Partitions.generalized_pentagonal(k)
+    gkk = Partitions.generalized_pentagonal(-k)
+    while n-gk >= 0 or n - gkk >= 0:
+      if n-gk not in Partitions.mydict2:
+        Partitions.mydict2[n-gk] = Partitions.fast_p(n-gk)
+      if n-gkk not in Partitions.mydict2:
+        Partitions.mydict2[n-gkk] = Partitions.fast_p(n-gkk)
+
+      res += int((-1)**(k-1)) * Partitions.mydict2[n-gk]
+      res += int((-1)**(-k-1)) * Partitions.mydict2[n-gkk]
+      
+      k += 1
+      gk = Partitions.generalized_pentagonal(k)
+      gkk = Partitions.generalized_pentagonal(-k)
+    return res
