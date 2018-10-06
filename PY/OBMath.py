@@ -23,6 +23,8 @@ class Partitions:
 
   @staticmethod
   def fast_p(n):
+    # This is based on Euler's pentagonal theorem
+    # https://en.wikipedia.org/wiki/Pentagonal_number_theorem
     if n < 0:
       return 0
     if n == 0 or n == 1:
