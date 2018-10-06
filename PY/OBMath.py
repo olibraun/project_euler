@@ -1,3 +1,5 @@
+import math
+
 class Partitions:
   mydict = {}
   mydict2 = {}
@@ -46,3 +48,18 @@ class Partitions:
       gk = Partitions.generalized_pentagonal(k)
       gkk = Partitions.generalized_pentagonal(-k)
     return res
+
+def isPrime(n):
+  if n < 0:
+    n *= -1
+  if n == 0:
+    return False
+  if n == 1:
+    return False
+  if n == 2:
+    return True
+  rn = int(math.ceil(math.sqrt(n)))
+  for x in range(2, rn + 1):
+    if n%x == 0:
+      return False
+  return True
