@@ -1,9 +1,6 @@
 #!/usr/bin/python3
 
 import OBMath
-import sys
-
-sys.setrecursionlimit(8000)
 
 def p(n):
   return OBMath.Partitions.fast_p(n)
