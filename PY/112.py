@@ -25,9 +25,6 @@ def is_decreasing(n):
 def is_bouncy(n):
   return not is_decreasing(n) and not is_increasing(n)
 
-is_bouncy(11)
-is_bouncy(12)
-
 proportion = 0
 n = 1
 number_of_bouncy_numbers = 0
