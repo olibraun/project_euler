@@ -106,6 +106,7 @@ def searchFour(threeSets, searchlimit):
   return fourSets
 
 def searchFive(fourSets, searchlimit):
+  foundSomething = False
   print(f'Searching sets of size 5 in which each element is at most {searchlimit}.')
   for s in fourSets:
     lower_limit = max(s) + 1
@@ -125,8 +126,10 @@ def searchFive(fourSets, searchlimit):
           break
           
       if isValidSet:
+        foundSomething = True
         print(f'I have found the set {mySet} with sum {sum(mySet)}.')
-  print('I have not found any suitable sets of size 5.')
+  if not foundSomething:
+    print('I have not found any suitable sets of size 5.')
 
 threeSets = searchThree(10000)
 fourSets = searchFour(threeSets, 20000)
