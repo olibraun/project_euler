@@ -1,10 +1,17 @@
 # Find the unique positive integer whose square has the form 1_2_3_4_5_6_7_8_9_0,
 # where each "_" is a single digit.
 
+LOWER_LIMIT = 1010101010   # This is the square root of 1020304050607080900
 SEARCH_LIMIT = 1389026624  # This is the square root of 1929394959697989990
-for n in range(1010101010, SEARCH_LIMIT):
-  if n % 10 != 0:
-    continue
+
+search_space = []
+x = LOWER_LIMIT
+
+while x <= SEARCH_LIMIT:
+  search_space.append(x)
+  x += 10
+
+for n in search_space:
   pre_test = str(((n % 1000000000)**2 % 1000000000))
   if pre_test[0] != '6' or pre_test[2] != '7' or pre_test[4] != '8' or pre_test[6] != '9':
     continue
