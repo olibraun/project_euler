@@ -29,4 +29,4 @@ for a in s:
                   for j in s8:
                     l.append(a+b+c+d+e+f+g+h+i+j)
 
-print l[999999]
+print(l[999999])

@@ -5,8 +5,6 @@
 #As 12 is the smallest abundant number, 1 + 2 + 3 + 4 + 6 = 16, the smallest number that can be written as the sum of two abundant numbers is 24. By mathematical analysis, it can be shown that all integers greater than 28123 can be written as the sum of two abundant numbers. However, this upper limit cannot be reduced any further by analysis even though it is known that the greatest number that cannot be expressed as the sum of two abundant numbers is less than this limit.
 #Find the sum of all the positive integers which cannot be written as the sum of two abundant numbers.
 
-from sets import Set
-# Need to use a set in order to create a multiplicity-free list.
 # The commented-out solution is disgustingly slow.
 
 def d(n):
@@ -15,12 +13,12 @@ def d(n):
 def isAbundant(n):
   return d(n) > n
 
-print 'Please be patient, this script takes about twenty seconds to run.'
+print('Please be patient, this script takes about twenty seconds to run.')
 
 abundant_numbers = [x for x in range(1, 28123 + 1) if isAbundant(x)]
 
-print 'Created list of abundant numbers up to 28123.'
-print 'It has ' + str(len(abundant_numbers)) + ' entries.'
+print('Created list of abundant numbers up to 28123.')
+print('It has ' + str(len(abundant_numbers)) + ' entries.')
 
 # sums_of_two_abundant_numbers = []
 # for x in range(0, len(abundant_numbers)):
@@ -35,16 +33,16 @@ print 'It has ' + str(len(abundant_numbers)) + ' entries.'
 #       if to_append:
 #         sums_of_two_abundant_numbers.append(s)
 
-sums_of_two_abundant_numbers = Set([])
+sums_of_two_abundant_numbers = set([])
 for x in range(0, len(abundant_numbers)):
   for y in range(x, len(abundant_numbers)):
     s = abundant_numbers[x] + abundant_numbers[y]
     if s <= 28123:
       sums_of_two_abundant_numbers.add(s)
 
-print 'Created list of sums of two abundant numbers up to 28123.'
-print 'It has ' + str(len(sums_of_two_abundant_numbers)) + ' entries.'
+print('Created list of sums of two abundant numbers up to 28123.')
+print('It has ' + str(len(sums_of_two_abundant_numbers)) + ' entries.')
 
 non_sums = [x for x in range(1, 28123 + 1) if not x in sums_of_two_abundant_numbers]
 
-print 'Here\'s your solution: ' + str(sum(non_sums))
+print('Here\'s your solution: ' + str(sum(non_sums)))

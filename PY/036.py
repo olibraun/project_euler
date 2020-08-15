@@ -24,4 +24,4 @@ def convertToBaseTwo(n):
 def is_10_2_palindrome(n):
   return isPalindrome(n) and isPalindrome(convertToBaseTwo(n))
 
-print sum([n for n in range(1,1000000) if is_10_2_palindrome(n)])
+print(sum([n for n in range(1,1000000) if is_10_2_palindrome(n)]))

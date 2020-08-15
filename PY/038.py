@@ -10,7 +10,6 @@
 #What is the largest 1 to 9 pandigital 9-digit number that can be formed as the concatenated product of an integer with
 #(1,2, ... , n) where n > 1?
 
-from sets import Set
 import math
 
 def concatenatedProduct(n, l):
@@ -23,12 +22,12 @@ def is19Pandigital(n):
   if n < 123456789:
     return False
   digits = [int(x) for x in str(n)]
-  digitsSet = Set(digits)
-  return len(digits) == 9 and digitsSet == Set([1,2,3,4,5,6,7,8,9])
+  digitsSet = set(digits)
+  return len(digits) == 9 and digitsSet == set([1,2,3,4,5,6,7,8,9])
 
 def noDoubleDigits(n):
   st = str(n)
-  return len(Set([x for x in st])) == len(st)
+  return len(set([x for x in st])) == len(st)
 
 currentlargest = 0
 currenti = 0
@@ -43,6 +42,6 @@ for n in range(2, 10):
         currenti = i
         currentn = n
 
-print currentlargest
-print 'Obtained as the concatenated product of ' + str(currenti) + ' and the interval 1,...,' + str(currentn-1) + '.'
-print concatenatedProduct(9327,[1,2])
+print(currentlargest)
+print('Obtained as the concatenated product of ' + str(currenti) + ' and the interval 1,...,' + str(currentn-1) + '.')
+print(concatenatedProduct(9327,[1,2]))

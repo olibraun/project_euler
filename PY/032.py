@@ -6,9 +6,7 @@
 #Find the sum of all products whose multiplicand/multiplier/product identity can be written as a 1 through 9 pandigital.
 #HINT: Some products can be obtained in more than one way so be sure to only include it once in your sum.
 
-from sets import Set
-
-alldigits = Set([str(x) for x in range(1, 10)])
+alldigits = set([str(x) for x in range(1, 10)])
 
 panprods = []
 
@@ -16,8 +14,8 @@ for a in range(1, 9876 + 1):
   blimit = int( (9876/a) + 1 )
   for b in range(a, blimit):
     p = a*b
-    digits = Set([x for x in str(a)] + [x for x in str(b)] + [x for x in str(p)])
+    digits = set([x for x in str(a)] + [x for x in str(b)] + [x for x in str(p)])
     if digits == alldigits:
       panprods.append(p)
 
-print sum(Set(panprods))
+print(sum(set(panprods)))

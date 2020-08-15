@@ -21,4 +21,4 @@ while number < grid_size**2:
     diagonals.append(number)
   length += 2
 
-print sum(diagonals)
+print(sum(diagonals))

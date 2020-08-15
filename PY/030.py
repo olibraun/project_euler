@@ -17,4 +17,4 @@ for x in range(2, 10**n):
   if x == sfp(x):
     list.append(x)
 
-print sum(list)
+print(sum(list))

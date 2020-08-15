@@ -21,4 +21,4 @@ result *= int(champ[10000])
 result *= int(champ[100000])
 result *= int(champ[1000000])
 
-print result
+print(result)

@@ -30,13 +30,13 @@ n = 1
 while 10**n <= (n+1)*fac(9):
   n += 1
 
-print 'The search space is the set of integers up to 10 to the power ' + str(n) + '.'
+print('The search space is the set of integers up to 10 to the power ' + str(n) + '.')
 
 for n in range(3, 10**n):
   if n == digitfac(n):
     list.append(n)
 
-print 'Here are the numbers with the desired property.'
-print list
-print 'Their sum is'
-print sum(list)
+print('Here are the numbers with the desired property.')
+print(list)
+print('Their sum is')
+print(sum(list))

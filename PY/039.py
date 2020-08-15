@@ -22,4 +22,4 @@ for p in range(1, 1000 + 1):
     maximum = n
     maximizer = p
 
-print maximizer
+print(maximizer)

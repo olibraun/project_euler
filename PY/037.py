@@ -48,6 +48,6 @@ while len(truncatable_primes) < 11:
     truncatable_primes.append(n)
   n += 1
 
-print truncatable_primes
-print len(truncatable_primes)
-print sum(truncatable_primes)
+print(truncatable_primes)
+print(len(truncatable_primes))
+print(sum(truncatable_primes))
