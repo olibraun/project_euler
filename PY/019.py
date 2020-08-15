@@ -4,7 +4,7 @@
 
 import datetime
 
-current = datetime.date(1901,01,01)
+current = datetime.date(1901,1,1)
 oneday = datetime.timedelta(days=1)
 
 end_date = datetime.date(2000,12,31)
@@ -15,4 +15,4 @@ while current <= end_date:
     count += 1
   current = current + oneday
 
-print count
+print(count)

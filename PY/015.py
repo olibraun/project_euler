@@ -12,4 +12,4 @@ def fac(n):
     return 1
   return n * fac(n - 1)
 
-print fac(40)/(fac(20)*fac(20))
+print( fac(40)/(fac(20)*fac(20)) )

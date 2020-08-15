@@ -45,4 +45,4 @@ def do_it(list):
       list[i][j] = newval
 
 do_it(triangle)
-print triangle[0][0]
+print(triangle[0][0])

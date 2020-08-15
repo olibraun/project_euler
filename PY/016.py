@@ -7,4 +7,4 @@ def digitsum(n):
   nn = str(n)
   return sum([int(x) for x in nn])
 
-print digitsum(2**1000)
+print(digitsum(2**1000))

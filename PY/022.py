@@ -26,4 +26,4 @@ totalScore = 0
 for i in range(0, len(ll)):
   totalScore += (i+1)*evalName(ll[i])
 
-print totalScore
+print(totalScore)

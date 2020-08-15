@@ -12,4 +12,4 @@ def fac(n):
   else:
     return n*fac(n-1)
 
-print digitsum(fac(100))
+print(digitsum(fac(100)))
