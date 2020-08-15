@@ -17,7 +17,7 @@ def isPrime(n):
   if n == 2:
     return True
   rn = int(math.ceil(math.sqrt(n)))
-  for x in xrange(2, rn + 1):
+  for x in range(2, rn + 1):
     if n%x == 0:
       return False
   return True
@@ -26,7 +26,7 @@ def isPandigital(n):
   sn = str(n)
   nn = len(sn)
   digits = Set([int(x) for x in sn])
-  return digits == Set(xrange(1, nn+1))
+  return digits == Set(range(1, nn+1))
 
 #use digit sum and the fact that it is congruent mod 3 to the number in order to exclude some lengths
 #for pandigital PRIMES
@@ -34,11 +34,11 @@ def isPandigital(n):
 print 'Start generating search spaces.'
 print 'Two digit search space skipped.'
 print 'Three digit search space skipped.'
-list4 = [n for n in xrange(1234, 4321+1) if isPandigital(n)]
+list4 = [n for n in range(1234, 4321+1) if isPandigital(n)]
 print 'Four digit search space generated.'
 print 'Five digit search space skipped.'
 print 'Six digit search space skipped.'
-list7 = [n for n in xrange(1234567, 7654321+1) if isPandigital(n)]
+list7 = [n for n in range(1234567, 7654321+1) if isPandigital(n)]
 print 'Seven digit search space generated.'
 print 'Eight digit search space skipped.'
 print 'Nine digit search space skipped.'

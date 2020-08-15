@@ -17,7 +17,7 @@ for l in lines:
 sum_str = str(sum)
 res_str = ''
 
-for x in xrange(0, 10):
+for x in range(0, 10):
   res_str += sum_str[x]
 
-print res_str
+print(res_str)

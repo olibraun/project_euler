@@ -6,10 +6,10 @@
 #Evaluate the sum of all the amicable numbers under 10000.
 
 def d(n):
-  return sum([x for x in xrange(1, n) if n%x == 0])
+  return sum([x for x in range(1, n) if n%x == 0])
 
 res = 0
-for x in xrange(1, 10000):
+for x in range(1, 10000):
   dx = d(x)
   ddx = d(dx)
   if ddx == x and x != dx:

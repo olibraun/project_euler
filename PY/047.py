@@ -22,13 +22,13 @@ def isPrime(n):
   if n == 2:
     return True
   rn = int(math.ceil(math.sqrt(n)))
-  for x in xrange(2, rn + 1):
+  for x in range(2, rn + 1):
     if n%x == 0:
       return False
   return True
 
 def smallestPrimeFactor(n):
-  for x in xrange(2, n+1):
+  for x in range(2, n+1):
     if isPrime(x) and n%x == 0:
       return x
 

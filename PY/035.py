@@ -16,7 +16,7 @@ def isPrime(n):
   if n == 2:
     return True
   rn = int(math.ceil(math.sqrt(n)))
-  for x in xrange(2, rn + 1):
+  for x in range(2, rn + 1):
     if n%x == 0:
       return False
   return True
@@ -25,21 +25,21 @@ def checkRotations(n):
   st = str(n)
   st1 = st
   l = len(st)
-  
+
   if not isPrime(int(st1)):
     return False
-  
+
   count = 0
   while count < l - 1:
     st1 = st1[-1] + st1[0:l-1]
     if not isPrime(int(st1)):
       return False
     count += 1
-  
+
   return True
 
 counter = 0
-for i in xrange(2, 1000000):
+for i in range(2, 1000000):
   if checkRotations(i):
     counter += 1
 

@@ -52,4 +52,4 @@ def lettercount(n):
     #one thousand
     return 3 + 8
 
-print sum([lettercount(n) for n in xrange(1, 1000 + 1)])
+print sum([lettercount(n) for n in range(1, 1000 + 1)])

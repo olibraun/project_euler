@@ -26,7 +26,7 @@ def isPrime(n):
   if n == 2:
     return True
   rn = int(math.ceil(math.sqrt(n)))
-  for x in xrange(2, rn + 1):
+  for x in range(2, rn + 1):
     if n%x == 0:
       return False
   return True
@@ -34,7 +34,7 @@ def isPrime(n):
 def number_of_primes(a, b):
   def f(x):
     return x**2 + a*x +b
-  
+
   n = 0
   count = 0
   ok = True
@@ -51,8 +51,8 @@ def number_of_primes(a, b):
 max = 0
 record_holder_a = 0
 record_holder_b = 0
-for a in xrange(-999, 1000):
-  for b in xrange(-1000, 1001):
+for a in range(-999, 1000):
+  for b in range(-1000, 1001):
     num = number_of_primes(a, b)
     if num > max:
       max = num

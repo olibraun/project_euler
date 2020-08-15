@@ -33,11 +33,11 @@ def noDoubleDigits(n):
 currentlargest = 0
 currenti = 0
 currentn = 0
-for n in xrange(2, 10):
-  for i in xrange(1, 9999):
+for n in range(2, 10):
+  for i in range(1, 9999):
     #i may not contain double digits
     if noDoubleDigits(i):
-      concat = concatenatedProduct(i, xrange(1,n))
+      concat = concatenatedProduct(i, range(1,n))
       if is19Pandigital(concat) and concat > currentlargest:
         currentlargest = concat
         currenti = i

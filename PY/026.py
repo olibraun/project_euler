@@ -9,7 +9,7 @@
 #    1/7	= 	0.(142857)
 #    1/8	= 	0.125
 #    1/9	= 	0.(1)
-#    1/10	= 	0.1 
+#    1/10	= 	0.1
 #Where 0.1(6) means 0.166666..., and has a 1-digit recurring cycle. It can be seen that 1/7 has a 6-digit recurring cycle.
 #Find the value of d < 1000 for which 1/d contains the longest recurring cycle in its decimal fraction part.
 
@@ -40,7 +40,7 @@ def period_length(d):
 
 d_record = 1
 d_record_holder = 1
-for d in xrange(2, 1000):
+for d in range(2, 1000):
   l = period_length(d)
   if l > d_record:
     d_record = l

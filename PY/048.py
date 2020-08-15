@@ -5,7 +5,7 @@
 
 res = 0
 modulus = 10**10
-for n in xrange(1, 1001):
+for n in range(1, 1001):
   res += ( ((n % modulus)**n) % modulus  )
 
 print res % modulus

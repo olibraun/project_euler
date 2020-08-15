@@ -15,12 +15,12 @@
 
 import math
 
-# powerlist = [7**k for k in xrange(0, 10**9/2 + 1)]
+# powerlist = [7**k for k in range(0, 10**9/2 + 1)]
 # print 'List of powers created.'
 
 def convertToBase(x, b):
   """
-  Converts given number x, from base 10 to base b 
+  Converts given number x, from base 10 to base b
   x -- the number in base 10
   b -- base to convert
   """
@@ -41,13 +41,13 @@ def countCarries7(a, b):
   res = [0]
   ma = max(len(a), len(b))
   if len(a) > len(b):
-    for i in xrange(min(len(a), len(b)), ma):
+    for i in range(min(len(a), len(b)), ma):
       b.append(0)
   else:
-    for i in xrange(min(len(a), len(b)), ma):
+    for i in range(min(len(a), len(b)), ma):
       a.append(0)
 
-  for i in xrange(0, ma):
+  for i in range(0, ma):
     temp = res[i] + int(a[i]) + int(b[i])
     carry = 0
     while temp >= 7:
@@ -70,7 +70,7 @@ def v7(n):
   maxexp = 0
   while 7**maxexp <= n:
     maxexp += 1
-  return sum([math.floor(n/7**k) for k in xrange(1, maxexp + 1)])
+  return sum([math.floor(n/7**k) for k in range(1, maxexp + 1)])
 
 def checkproperty(n, k):
   return v7(n) - v7(k) - v7(n - k) == 0
@@ -83,12 +83,12 @@ def checkproperty2(n, k):
 rows = 10**9
 count = 1
 
-for n in xrange(1, rows):
+for n in range(1, rows):
   if n%10000 == 0:
     print 'n=' + str(n)
   klimit = int(math.ceil(n / 2))
   count += 2 #for the outer entries
-  for k in xrange(1, klimit + 1):
+  for k in range(1, klimit + 1):
     if checkproperty2(n, k):
       if n % 2 == 0 and k == klimit:
         count += 1

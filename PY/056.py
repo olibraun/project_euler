@@ -11,8 +11,8 @@ def digitsum(n):
   return sum([int(x) for x in nn])
 
 powers = []
-for a in xrange(1, 100):
-  for b in xrange(1, 100):
+for a in range(1, 100):
+  for b in range(1, 100):
     powers.append(a**b)
 
 powers = Set(powers)

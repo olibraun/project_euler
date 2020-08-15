@@ -13,7 +13,7 @@ while (n+1)*(9**5) >= 10**n:
 
 list = []
 
-for x in xrange(2, 10**n):
+for x in range(2, 10**n):
   if x == sfp(x):
     list.append(x)
 

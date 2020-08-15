@@ -8,13 +8,13 @@
 
 from sets import Set
 
-alldigits = Set([str(x) for x in xrange(1, 10)])
+alldigits = Set([str(x) for x in range(1, 10)])
 
 panprods = []
 
-for a in xrange(1, 9876 + 1):
+for a in range(1, 9876 + 1):
   blimit = int( (9876/a) + 1 )
-  for b in xrange(a, blimit):
+  for b in range(a, blimit):
     p = a*b
     digits = Set([x for x in str(a)] + [x for x in str(b)] + [x for x in str(p)])
     if digits == alldigits:

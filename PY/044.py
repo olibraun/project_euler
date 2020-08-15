@@ -8,7 +8,7 @@
 
 import math
 
-P = [n*(3*n-1)/2 for n in xrange(1, 100000)]
+P = [n*(3*n-1)/2 for n in range(1, 100000)]
 
 def P(n):
   return n*(3*n-1)/2
@@ -26,7 +26,7 @@ while not done:
   if p - P(n-1) > currentD:
     #We're done because of the growth behaviour of P(n)-P(n-1)
     done = True
-  for i in xrange(n - 1, 0, -1):
+  for i in range(n - 1, 0, -1):
     q = P(i)
     d = p - q
     s = p + q

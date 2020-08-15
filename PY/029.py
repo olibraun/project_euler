@@ -5,8 +5,8 @@
 from sets import Set
 
 l = []
-for a in xrange(2, 101):
-  for b in xrange(2, 101):
+for a in range(2, 101):
+  for b in range(2, 101):
     l.append(a**b)
 
 print(len(Set(l)))

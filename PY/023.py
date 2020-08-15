@@ -10,25 +10,25 @@ from sets import Set
 # The commented-out solution is disgustingly slow.
 
 def d(n):
-  return sum([x for x in xrange(1, n) if n%x == 0])
+  return sum([x for x in range(1, n) if n%x == 0])
 
 def isAbundant(n):
   return d(n) > n
 
 print 'Please be patient, this script takes about twenty seconds to run.'
 
-abundant_numbers = [x for x in xrange(1, 28123 + 1) if isAbundant(x)]
+abundant_numbers = [x for x in range(1, 28123 + 1) if isAbundant(x)]
 
 print 'Created list of abundant numbers up to 28123.'
 print 'It has ' + str(len(abundant_numbers)) + ' entries.'
 
 # sums_of_two_abundant_numbers = []
-# for x in xrange(0, len(abundant_numbers)):
-#   for y in xrange(x, len(abundant_numbers)):
+# for x in range(0, len(abundant_numbers)):
+#   for y in range(x, len(abundant_numbers)):
 #     s = abundant_numbers[x] + abundant_numbers[y]
 #     if s <= 28123:
 #       to_append = True
-#       for l in xrange(0, len(sums_of_two_abundant_numbers)):
+#       for l in range(0, len(sums_of_two_abundant_numbers)):
 #         if s == sums_of_two_abundant_numbers[l]:
 #           to_append = False
 #           break
@@ -36,8 +36,8 @@ print 'It has ' + str(len(abundant_numbers)) + ' entries.'
 #         sums_of_two_abundant_numbers.append(s)
 
 sums_of_two_abundant_numbers = Set([])
-for x in xrange(0, len(abundant_numbers)):
-  for y in xrange(x, len(abundant_numbers)):
+for x in range(0, len(abundant_numbers)):
+  for y in range(x, len(abundant_numbers)):
     s = abundant_numbers[x] + abundant_numbers[y]
     if s <= 28123:
       sums_of_two_abundant_numbers.add(s)
@@ -45,6 +45,6 @@ for x in xrange(0, len(abundant_numbers)):
 print 'Created list of sums of two abundant numbers up to 28123.'
 print 'It has ' + str(len(sums_of_two_abundant_numbers)) + ' entries.'
 
-non_sums = [x for x in xrange(1, 28123 + 1) if not x in sums_of_two_abundant_numbers]
+non_sums = [x for x in range(1, 28123 + 1) if not x in sums_of_two_abundant_numbers]
 
 print 'Here\'s your solution: ' + str(sum(non_sums))

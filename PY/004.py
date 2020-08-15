@@ -9,8 +9,8 @@ def isPalindrome(n):
 
 pals = []
 
-for a in xrange(100, 1000):
-  for b in xrange(a, 1000):
+for a in range(100, 1000):
+  for b in range(a, 1000):
     p = a*b
     if isPalindrome(p):
       pals.append(p)

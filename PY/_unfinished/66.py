@@ -29,7 +29,7 @@ while D <= maxD:
     while not solution:
       x2 = x**2
       if x2 % D == 1:
-        for y in xrange(1, x + 1):
+        for y in range(1, x + 1):
           if x2 - D*y**2 == 1:
             solution = True
             if x >= current_max_x:

@@ -10,7 +10,7 @@ def fac(n):
   else:
     return n*fac(n-1)
 
-factorials_of_digits = [fac(n) for n in xrange(0, 10)]
+factorials_of_digits = [fac(n) for n in range(0, 10)]
 
 #Define faster factorial as a lookup function using the above list factorials_of_digits
 def fast_fac(n):
@@ -32,7 +32,7 @@ while 10**n <= (n+1)*fac(9):
 
 print 'The search space is the set of integers up to 10 to the power ' + str(n) + '.'
 
-for n in xrange(3, 10**n):
+for n in range(3, 10**n):
   if n == digitfac(n):
     list.append(n)
 

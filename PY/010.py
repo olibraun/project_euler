@@ -11,9 +11,9 @@ def isPrime(n):
   if n==2:
     return True
   rn = int(math.ceil(math.sqrt(n)))
-  for x in xrange(2, rn + 1):
+  for x in range(2, rn + 1):
     if n%x == 0:
       return False
   return True
 
-print sum([x for x in xrange(1, 2000000) if isPrime(x)])
+print sum([x for x in range(1, 2000000) if isPrime(x)])

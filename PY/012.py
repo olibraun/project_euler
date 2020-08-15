@@ -21,7 +21,7 @@ def isPrime(n):
   if n==2:
     return True
   rn = int(math.ceil(math.sqrt(n)))
-  for x in xrange(2, rn + 1):
+  for x in range(2, rn + 1):
     if n%x == 0:
       return False
   return True
@@ -31,7 +31,7 @@ def triangle(n):
 
 def number_of_divisors(n):
   rn = int(math.ceil(math.sqrt(n)))
-  return 2*len([x for x in xrange(1, rn+1) if n%x == 0])
+  return 2*len([x for x in range(1, rn+1) if n%x == 0])
 
 found = False
 n = 1

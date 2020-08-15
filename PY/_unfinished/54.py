@@ -1,9 +1,9 @@
 #!/usr/bin/python
 
 #The file, poker.txt, contains one-thousand random hands dealt to two players.
-#Each line of the file contains ten cards (separated by a single space): 
+#Each line of the file contains ten cards (separated by a single space):
 #the first five are Player 1's cards and the last five are Player 2's cards.
-# You can assume that all hands are valid (no invalid characters or repeated cards), 
+# You can assume that all hands are valid (no invalid characters or repeated cards),
 #each player's hand is in no specific order, and in each hand there is a clear winner.
 #How many hands does Player 1 win?
 
@@ -13,17 +13,17 @@ file = '/home/oli/repositories/project_euler/PY/p054_poker.txt'
 raw = [x.replace('\n','').split(' ') for x in open(file)]
 
 def isStraight(l):
-  for start in xrange(2, 11):
+  for start in range(2, 11):
     if Set(l) == Set([start, start+1, start+2, start+3, start+4]) or Set(l) == Set([14, 2, 3, 4, 5]):
       return True
     return False
 
 def evaluate_pair_of_hands(s):
-  player1_raw = [s[i] for i in xrange(0, 5)]
+  player1_raw = [s[i] for i in range(0, 5)]
   player1_cards = [x[0].replace('T','10').replace('J','11').replace('Q','12').replace('K','13').replace('A','14') for x in player1_raw]
   player1_suits = Set([x[1] for x in player1_raw])
 
-  player2_raw = [s[i] for i in xrange(5, 10)]
+  player2_raw = [s[i] for i in range(5, 10)]
   player2_cards = [x[0].replace('T','10').replace('J','11').replace('Q','12').replace('K','13').replace('A','14') for x in player2_raw]
   player2_suits = Set([x[1] for x in player2_raw])
 
@@ -70,7 +70,7 @@ def evaluate_pair_of_hands(s):
   print player1_cards
   print player1_suits
 
-  
+
 
 print raw[0]
 print raw[1]

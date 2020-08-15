@@ -22,16 +22,16 @@ def isPrime(n):
   if n == 2:
     return True
   rn = int(math.ceil(math.sqrt(n)))
-  for x in xrange(2, rn + 1):
+  for x in range(2, rn + 1):
     if n%x == 0:
       return False
   return True
 
 limit = 100000
 rlimit = int(math.ceil(math.sqrt(limit)))
-primes = [p for p in xrange(2, limit) if isPrime(p)]
-odd_composites = [n for n in xrange(9, limit) if n%2 == 1 and not isPrime(n)]
-squares = [n**2 for n in xrange(1, rlimit)]
+primes = [p for p in range(2, limit) if isPrime(p)]
+odd_composites = [n for n in range(9, limit) if n%2 == 1 and not isPrime(n)]
+squares = [n**2 for n in range(1, rlimit)]
 
 def isGoldbach(n):
   global primes

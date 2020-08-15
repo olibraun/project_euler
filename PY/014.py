@@ -18,8 +18,8 @@ def collatz(n):
 def max_collatz_length(n):
   L = [0, 1]
   max = 0
-  
-  for x in xrange(2, n):
+
+  for x in range(2, n):
     r = x
     count = 0
     while r >= x:
@@ -28,7 +28,7 @@ def max_collatz_length(n):
     L.append(count + L[r])
     if L[x] > L[max]:
       max = x
-  
+
   return max
 
 print max_collatz_length(1000000)

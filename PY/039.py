@@ -6,8 +6,8 @@
 
 def number_of_solutions(p):
   solutions = 0
-  for a in xrange(1, p+1):
-    for b in xrange(a, p+1):
+  for a in range(1, p+1):
+    for b in range(a, p+1):
       c = p - (a + b)
       if a**2 + b**2 == c**2:
         solutions += 1
@@ -16,7 +16,7 @@ def number_of_solutions(p):
 maximum = 1
 maximizer = 1
 
-for p in xrange(1, 1000 + 1):
+for p in range(1, 1000 + 1):
   n = number_of_solutions(p)
   if n > maximum:
     maximum = n

@@ -6,8 +6,8 @@ triangle = [[int(n) for n in l] for l in raw]
 
 #Use the function from problem 18
 def do_it(list):
-  for i in xrange(len(list) - 2, -1, -1):
-    for j in xrange(0, len(list[i])):
+  for i in range(len(list) - 2, -1, -1):
+    for j in range(0, len(list[i])):
       temp = list[i][j]
       newval = temp + max([list[i+1][j], list[i+1][j+1]])
       list[i][j] = newval

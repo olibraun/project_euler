@@ -2,7 +2,7 @@
 
 #The arithmetic sequence, 1487, 4817, 8147, in which each of the terms increases by 3330, is unusual in two ways:
 #(i) each of the three terms are prime, and, (ii) each of the 4-digit numbers are permutations of one another.
-#There are no arithmetic sequences made up of three 1-, 2-, or 3-digit primes, exhibiting this property, 
+#There are no arithmetic sequences made up of three 1-, 2-, or 3-digit primes, exhibiting this property,
 #but there is one other 4-digit increasing sequence.
 #What 12-digit number do you form by concatenating the three terms in this sequence?
 
@@ -19,7 +19,7 @@ def isPrime(n):
   if n == 2:
     return True
   rn = int(math.ceil(math.sqrt(n)))
-  for x in xrange(2, rn + 1):
+  for x in range(2, rn + 1):
     if n%x == 0:
       return False
   return True
@@ -34,7 +34,7 @@ def checkSequence(l):
   a = l[0]
   b = l[1]
   c = l[2]
-  
+
   if not (isPrime(a) and isPrime(b) and isPrime(c)):
     return False
 
@@ -51,7 +51,7 @@ n = 1009
 solution = []
 while n <= 9949:
   qlimit = int(math.ceil((9973-n)/2))
-  for q in xrange(1, qlimit + 1):
+  for q in range(1, qlimit + 1):
     seq = [n, n+q, n + 2*q]
     if checkSequence(seq) and not (n == 1487 and q == 3330):
       solution = seq

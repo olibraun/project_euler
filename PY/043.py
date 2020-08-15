@@ -17,10 +17,10 @@ from sets import Set
 def hasProperty(n):
   st = str(n)
   d = [x for x in st]
-  
-  if len(d) != 10 or Set(d) != Set([str(n) for n in xrange(0, 10)]):
+
+  if len(d) != 10 or Set(d) != Set([str(n) for n in range(0, 10)]):
     return False
-  
+
   if int(d[1] + d[2] + d[3]) % 2 != 0:
     return False
 

@@ -16,13 +16,13 @@ def isPrime(n):
   if n == 2:
     return True
   rn = int(math.ceil(math.sqrt(n)))
-  for x in xrange(2, rn + 1):
+  for x in range(2, rn + 1):
     if n%x == 0:
       return False
   return True
 
 def smallestPrimeFactor(n):
-  for x in xrange(2, n+1):
+  for x in range(2, n+1):
     if isPrime(x) and n%x == 0:
       return x
 
@@ -77,7 +77,7 @@ def getProperty2(p1,p2):
   else:
     return 10**10
 
-candidates = [x for x in xrange(2, 10**7 / 2) if x % 3 == 1 or x % 3 == 2]
+candidates = [x for x in range(2, 10**7 / 2) if x % 3 == 1 or x % 3 == 2]
 candidates2 = [x for x in candidates if isPrime(x)]
 
 print 'Search space set up.'
@@ -86,7 +86,7 @@ minimum = 10**10
 bestn = 0
 l = len(candidates2)
 limit = 10**7
-for i in xrange(l):
+for i in range(l):
   j = i
   p1 = candidates2[i]
   p2 = candidates2[j]
