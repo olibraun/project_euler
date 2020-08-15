@@ -36,5 +36,5 @@ for x in xrange(0, len(num) - 13):
   product = prod([int(num[i]) for i in xrange(x, x + 13)])
   if product > record:
     record = product
-  
-print record
+
+print(record)
